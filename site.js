@@ -1,15 +1,31 @@
-// Перечисление зависимостей:
-var path = require('path');
-var express = require('express');
+const express = require("express");
+const hbs = require("hbs");
+const bodyParser = require("body-parser");
 
-// Описание настроек:
-var staticSiteOptions = {
-   portnum: 80, // слушать порт 80
-   maxAge: 1000 * 60 * 15 // хранить страницы в кэше пятнадцать минут
-};
+const app = express();
 
-// Запуск сайта:
-express().use(express.static(
-   path.join(__dirname, 'static'),
-   staticSiteOptions
-)).listen(staticSiteOptions.portnum);
+app.set("view engine", "hbs");
+hbs.registerPartials(__dirname + "/views");
+// создаем парсер для данных в формате json
+const urlencodedParser = bodyParser.urlencoded({extended: false})
+   
+app.get("/", function(request, response){
+      
+    response.sendFile(__dirname + "/static/index.html");
+});
+
+app.get("/CourierReg", function(request, response){
+      
+   response.sendFile(__dirname + "/static/CourierReg.html");
+});
+
+app.post("/CourierReg/send", urlencodedParser, function (request, response) {
+   console.log(request.body);
+   if(!request.body) return response.sendStatus(400);
+    
+   response.render("CourierID", {
+      ID: "1"
+   });
+});
+  
+app.listen(80);
