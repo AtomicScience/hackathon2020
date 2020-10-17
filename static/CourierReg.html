@@ -7,9 +7,9 @@
     </head>
     <body>
         <h1><p align="center", >Регистрация курьера:</p></h1>
-        <form name="test" method="post" action="input1.php">
+        <form name="test" method="post" action="CourierReg/Send">
             <p><b>Ваше имя:</b><br>
-                <input type="text" required size="40">
+                <input type="text" name="name" required size="40">
             </p>
             <p><b>Ваш телефон:</b><br>
                 <input id="online_phone" name="phone" type="tel" maxlength="50"
@@ -58,17 +58,17 @@
             <!--КОНЕЦ ГОВНОКОДА-->
             
             <p><b>Выберите вид вашего транспорта:</b><br>
-                <p><select>
-                    <option value="Машина">Машина</option>
-                    <option value="Грузовой">Грузовой</option>
-                    <option value="Велосипед">Велосипед</option>
-                    <option value="Пешком">Пешком</option>
+                <p><select name="means">
+                    <option value="car">Машина</option>
+                    <option value="cargo">Грузовой</option>
+                    <option value="bicycle">Велосипед</option>
+                    <option value="by_foot">Пешком</option>
                    </select></p>
 
             <p><b>Введите максимальный вес поссылки</b><br>  
 
             <p>
-                <input type="number" required>
+                <input type="number" name="cargo" required>
             </p>
 
             <input type="submit" value="Отправить">
