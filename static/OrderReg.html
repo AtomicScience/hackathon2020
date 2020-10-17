@@ -6,8 +6,47 @@
         <link href="stile.css" rel="stylesheet">
     </head>
     <body>
-        <h1><p align="center", >Регистрация курьера:</p></h1>
-        <form name="test" method="post" action="input1.php">
+        
+        <h1><p align="center">Откуда:</p></h1>
+        <form name="test" method="post" action="/OrderReg/send">
+          <div class="field">
+            <label>Город</label>
+            <input type="text" name="from_city" required>
+          </div>
+          <div class="field">
+            <label>Улица</label>
+            <input type="text" name="from_street" required> 
+          </div>
+          <div class="field">
+            <label>Дом</label>
+            <input type="text" name="from_building" required>  
+          </div>
+          <div class="field">
+            <label>Квартира</label>
+            <input type="text" name="from_flat" required>
+          </div>
+          <div class="tooltip" style="display: none;"><b></b><span></span></div>
+
+        <h1><p align="center">Куда:</p></h1>
+          <div class="field">
+            <label>Город</label>
+            <input type="text" name="to_city" required>
+          </div>
+          <div class="field">
+            <label>Улица</label>
+            <input type="text" name="to_street" required>
+          </div>
+          <div class="field">
+            <label>Дом</label>
+            <input type="text" name="to_building" required>
+          </div>
+          <div class="field">
+            <label>Квартира</label>
+            <input type="text" name="to_flat" required>
+          </div>
+          <div class="tooltip" style="display: none;"><b></b><span></span></div>
+
+        <h1><p align="center"> Другая информация:</p></h1>
             <p><b>Ваше имя:</b><br>
                 <input type="text" required size="40">
             </p>
@@ -57,22 +96,28 @@
               </script>
             <!--КОНЕЦ ГОВНОКОДА-->
             
-            <p><b>Выберите вид вашего транспорта:</b><br>
-                <p><select>
-                    <option value="Машина">Машина</option>
-                    <option value="Грузовой">Грузовой</option>
-                    <option value="Велосипед">Велосипед</option>
-                    <option value="Пешком">Пешком</option>
-                   </select></p>
-
-            <p><b>Введите максимальный вес поссылки</b><br>  
-
-            <p>
-                <input type="number" required>
+            <p><b>Выберите категорию груза</b></br>
+              <select name="type" required>
+                  <option value="large">Крупногабарит</option>
+                  <option value="small">Малогабарит</option>
+                  <option value="perishable">Скоропортящийся</option>
+                  <option value="fragile">Хрупкий</option>
+                </select>
+                
+            <P>      
+            <b>Введите максимальный вес поссылки</b></br>
+                <input type="number" name="weight" required>
             </p>
 
-            <input type="submit" value="Отправить">
-            <input type="reset" value="Очистить">
+            <p>
+            <b>Введите дату и время доставки</b></br>
+                <input id="datetime" name="date" type="datetime-local" required>
+            </p>
+
+            <p>
+              <input type="submit" value="Отправить">
+              <input type="reset" value="Очистить">
+            </p>
            </form>
     </body>
 </html>
