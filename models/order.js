@@ -1,3 +1,4 @@
+
 const { Schema, model } = require('mongoose')
 const { stringify } = require('querystring')
 const schema = new Schema({
@@ -45,7 +46,7 @@ const schema = new Schema({
         
         required: true
       },
-    phone: {
+     phone: {
         type: String,
         
         required: true

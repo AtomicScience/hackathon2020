@@ -2,6 +2,7 @@ const { Schema, model } = require('mongoose')
 const schema = new Schema({
     id:{
         type: String,
+
         required: false
     },
     name: {
@@ -29,3 +30,4 @@ const schema = new Schema({
       
 })
 module.exports = model('courier', schema)//edit_p
+     
