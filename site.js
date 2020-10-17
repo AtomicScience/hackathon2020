@@ -59,16 +59,10 @@ app.post("/CourierReg/send", urlencodedParser, function (request, response) {
     })
     console.log(courier)
     courier.save()
-   response.render("CourierID", {
-      ID: "1"
-   });
 });
 
- 
-
- 
  mongoose.connect(
-   'mongodb+srv://ilau020203:ilau020203@cluster0.dn8qc.mongodb.net/<dbname>?retryWrites=true&w=majority',
+   'mongodb+srv://ilau020203:ilau020203@cluster0.dn8qc.mongodb.net/test?retryWrites=true&w=majority',
    {
      useNewUrlParser: true,
      useFindAndModify: false
