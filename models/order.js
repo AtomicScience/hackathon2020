@@ -2,7 +2,7 @@ const { Schema, model } = require('mongoose')
 const { stringify } = require('querystring')
 const schema = new Schema({
     id:{
-        type: Number,
+        type: String,
         required: false
     },
     name: {
@@ -10,39 +10,63 @@ const schema = new Schema({
         
         required: true
       },
-    number_tlephone: {
-        type: Number,
-        
-        required: true
-      },
-      
-
-    start_adress:{
-        type:String,
-        required: true,
-
-    },
-
-    end_adress:{
-        type:String,
-        required: true,
-
-    },
-
-    wieght: {
-        type: Number,
-        
-        required: true
-      },
-      kind_of_transport: {
+      from_city: {
         type: String,
         
         required: true
       },
-      creative: {
+      from_building: {
+        type: String,
+        
+        required: true
+      },
+      from_flat: {
+        type: String,
+        
+        required: true
+      },
+      to_city: {
+        type: String,
+        
+        required: true
+      },
+      to_street: {
+        type: String,
+        
+        required: true
+      },
+      to_building: {
+        type: String,
+        
+        required: true
+      },
+      to_flat: {
+        type: String,
+        
+        required: true
+      },
+    phone: {
+        type: String,
+        
+        required: true
+      },
+      date: {
+        type: Date,
+        required: true
+      },
+      weight: {
         type: Number,
         
         required: true
+      },
+      type: {
+        type: String,
+        
+        required: true
+      },
+      rating: {
+        type: Number,
+        required: false
       }
       
 })

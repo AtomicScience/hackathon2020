@@ -11,23 +11,19 @@ const schema = new Schema({
       },
       phone: {
         type: String,
-
         required: true
       },
       
       weight: {
         type: Number,
-        
         required: true
       },
-      kind_of_transport: {
+      type: {
         type: String,
-        
         required: true
       },
-      creative: {
+      rating: {
         type:Number,
-        
         required: false
       }
       

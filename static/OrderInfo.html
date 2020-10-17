@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Пример веб-страницы</title>
+        <link href="stile.css" rel="stylesheet">
+    </head>
+    <body>
+        
+        <h1><p align="center", >Откуда:</p></h1>
+        <form name="test" method="post" action="input1.php">
+          <div class="field">
+            <label>Город</label>
+            <input type="text" name="city" placeholder="Якутск" readonly>
+          </div>
+          <div class="field">
+            <label>Улица</label>
+            <input type="text" name="street" placeholder="Пушкина" readonly>
+          </div>
+          <div class="field">
+            <label>Дом</label>
+            <input type="text" name="building" placeholder="Колотушкина" readonly>
+          </div>
+          <div class="field">
+            <label>Квартира</label>
+            <input type="text" name="flat" placeholder="666" readonly>
+          </div>
+          <div class="tooltip" style="display: none;"><b></b><span></span></div>
+        </form>
+
+        <h1><p align="center", >Куда:</p></h1>
+        <form name="test" method="post" action="input1.php">
+          <div class="field">
+            <label>Город</label>
+            <input type="text" name="city" placeholder="Париж" readonly>
+          </div>
+          <div class="field">
+            <label>Улица</label>
+            <input type="text" name="street" placeholder="Парижская" readonly>
+          </div>
+          <div class="field">
+            <label>Дом</label>
+            <input type="text" name="building" placeholder="188" readonly>
+          </div>
+          <div class="field">
+            <label>Квартира</label>
+            <input type="text" name="flat" placeholder="13" readonly>
+          </div>
+          <div class="tooltip" style="display: none;"><b></b><span></span></div>
+        </form>
+
+        <h1><p align="center"> Другая информация:</p></h1>
+        <form>
+            <div class="field">
+                <b>Имя заказчика:</b><br>
+                <input type="text" required size="40" placeholder="Иван" readonly>
+            </div>
+            <div class="field">
+                <b>Телефон заказчика</b><br>
+                <input id="online_phone" name="phone" type="tel" maxlength="50"
+                    autofocus="autofocus" required="required"
+                    
+                    pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}"
+                    placeholder="+7(800)555-35-35" readonly>
+            </div>
+            
+            <div class="field">
+                <b>Категория груза</b></br>
+                <input type="text" required size="40" placeholder="Скоропортящийся" readonly>
+            </div>
+                  
+            <div class="field">
+            <b>Введите максимальный вес поссылки</b></br>
+                <input type="number" placeholder="8 тонн" readonly>
+            </div>
+
+            <div class="field">
+            <b>Введите дату и время доставки</b></br>
+                <input id="datetime" placeholder="17.10.2020 23:20" readonly>
+            </div>
+
+            <p>
+            <input type="reset" value="Отказаться от заказа">
+            </p>
+
+           </form>
+    </body>
+</html>
