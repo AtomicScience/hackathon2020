@@ -19,6 +19,21 @@ app.get("/CourierReg", function(request, response){
    response.sendFile(__dirname + "/static/CourierReg.html");
 });
 
+app.get("/OrderReg", function(request, response){
+      
+   response.sendFile(__dirname + "/static/OrderReg.html");
+});
+
+app.get("/CourierLK", function(request, response){
+      
+   response.sendFile(__dirname + "/static/CourierLK.html");
+});
+
+app.get("/stile.css", function(request, response){
+      
+   response.sendFile(__dirname + "/static/stile.css");
+});
+
 app.post("/CourierReg/send", urlencodedParser, function (request, response) {
    console.log(request.body);
    if(!request.body) return response.sendStatus(400);
@@ -27,5 +42,9 @@ app.post("/CourierReg/send", urlencodedParser, function (request, response) {
       ID: "1"
    });
 });
-  
+
+app.post("/OrderReg/send", urlencodedParser, function (request, response) {
+   console.log(request.body);
+   if(!request.body) return response.sendStatus(400);
+});
 app.listen(80);
